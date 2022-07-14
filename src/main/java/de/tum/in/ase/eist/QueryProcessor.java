@@ -28,6 +28,19 @@ public class QueryProcessor {
             }
             return sum;
         }
+        else if(query.contains("multiplied")){
+            String[] queryArray = query.split(" ");
+            String product = "0";
+            for(int i = 0; i < queryArray.length; i++) {
+                if(queryArray[i].equals("multiplied") && i - 1 >= 0 && i + 2 < queryArray.length){
+                    product = Integer.toString(Integer.parseInt(queryArray[i - 1]) * Integer.parseInt(queryArray[i + 2]));
+                    break;
+                }
+
+            }
+            return product;
+        }
+
         else if (query.contains("largest:")) {
             String[] queryArray = query.split(" ");
             String max = "0";

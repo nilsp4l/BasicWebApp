@@ -42,4 +42,10 @@ class QueryProcessorTest {
 		assertEquals("592", actual);
 	}
 
+	@Test
+	void testMultiply() {
+		String actual = queryProcessor.process("what is 2 multiplied by 19");
+		assertEquals("38", actual);
+	}
+
 }
